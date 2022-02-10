@@ -22,11 +22,32 @@ Note: these two CSVs have been undersampled to give an even number of high risk 
 
 We will create a training set from the 2019 loans using `pd.get_dummies()` to convert the categorical data to numeric columns. Similarly, we will create a testing set from the 2020 loans, also using `pd.get_dummies()`. Note! There are categories in the 2019 loans that do not exist in the testing set. If we fit a model to the training set and try to score it on the testing set as is, we will get an error. We need to use code to fill in the missing categories in the testing set. 
 
+## Unscaled results
+
+#### LR 
+
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/Supervised_Machine_Learning/blob/main/images/unscaled_LR.png">
+
+#### RF
+
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/Supervised_Machine_Learning/blob/main/images/unscaled%20_RF.png">
+
+
 ## Scale the data
 
 The data going into these models was never scaled, an important step in preprocessing. Use `StandardScaler` to scale the training and testing sets. Fit and score the LogisticRegression and RandomForestClassifier models on the scaled data. 
 
+## Scaled results
 
+#### LR
+
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/Supervised_Machine_Learning/blob/main/images/scaled_LR.png">
+
+#### RF
+     
+<img width="592" alt="Screen Shot 2021-10-28 at 6 29 10 PM" src="https://github.com/azmir0218/Supervised_Machine_Learning/blob/main/images/scaled_RF.png">
+
+                                                                 
 ### References
 
 LendingClub (2019-2020) _Loan Stats_. Retrieved from: [https://resources.lendingclub.com/]
